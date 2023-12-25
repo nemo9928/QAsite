@@ -1,0 +1,127 @@
+@charset "UTF-8";
+
+/*見出し*/
+h1 {
+	padding: 0.5em 1em;
+	border-bottom: solid 6px #33FFFF;
+	box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);
+	text-align: center
+}
+
+/*新規登録、ログイン画面*/
+.center{
+	max-width: fit-content;
+	padding-left: 0.83em;
+	padding-right: 0.83em;
+	margin-top: 100px;
+	margin-bottom: 100px;
+	margin-right: auto;
+	margin-left:auto ;
+	background-color: lightgrey;
+	text-align: center;
+}
+.center-contents{
+	width:100%;
+	text-align: left;
+}
+
+/*最下部*/
+.footer {
+	background-color: lightblue;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 10px;
+}
+
+/*ボタンを均等に配置*/
+.RightLeft{
+	display:flex;
+	justify-content: space-between;
+}
+
+@media only screen and (min-width: 666px) {
+	/*画面分割*/
+	.SplitScreen{
+		min-height: 65vh;
+		position:relative;
+		display: grid;
+		grid-template-columns : 1fr 1fr;
+		padding-bottom: 120px;/*←footerの高さ*/
+	}
+	.left{
+		grid-column: 1/2;
+	}
+	.right{
+		grid-column: 2/3;
+		border-left: solid;
+	}
+	/*最下部　固定*/
+	.footer {
+		background-color: lightblue;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		padding: 10px;
+	}
+}
+
+
+/*問題表示*/
+.question{
+	background-color: white;
+	border:solid 1px ;
+	height: 100px;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+/*解答表示*/
+#view{
+    display: none;
+}
+.view{
+    display: inline-block;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.answer{
+    display: none;
+}
+#view:checked+label+.answer{
+	display: block;
+    background: white;
+    border:solid 1px ;
+	height: 100px;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+/*QA記入欄*/
+.text{
+	width: 80%;
+}
+.textarea{
+	width: 80%;
+	height: 100px;
+}
+
+/*左右を見やすく*/
+.test{
+	text-align: center;
+	max-width:333px;
+	border-radius: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: lightgrey;
+	border-bottom: solid;
+}
+
+/*DBから受け取った情報をtable形式で表示*/
+table {
+	display: block;
+	overflow-x: scroll;
+	white-space: nowrap;
+	-webkit-overflow-scrolling: touch;
+}

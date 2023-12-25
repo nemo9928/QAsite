@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width">
+		<link rel="stylesheet" href="./pagelayout.css">
+		<title>一問一答</title>
+	</head>
+	<body>
+		<h1><a href="http://localhost:8080/QAsite/QAfrontend/QandA.html">一問一答</a></h1>
+		<div class="center">
+			<h2>新規登録・ログイン</h2>
+			<div class="center-contents">
+				<form action="?" method="post">
+					ユーザーid<br/>
+					<input type="text" name="id"><br/>
+					パスワード<br/>
+					<input type="password" name="pass"><br/><br/><br/>
+			
+					<div class="RightLeft">
+						<input type="submit" name="btn" value="新規登録" formaction="/QAsite/register">
+						
+						<input type="submit" value="ログイン" formaction="/QAsite/login">
+					</div>
+				</form>
+			</div><br/>
+			<a href="QandAdelete.jsp">アカウントの削除</a>
+		</div>
+		
+		<div class="footer">
+			<a href="http://localhost:8080/QAsite/QAfrontend/QandAguide.jsp">当サイトの使い方</a><br/>
+			ソースコード<br/>
+			<a href="http://localhost:8080/QAsite/QAfrontend/QandAexplaincode.jsp">コードの解説</a>
+		</div>
+	</body>
+</html>

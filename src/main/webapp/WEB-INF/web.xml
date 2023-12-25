@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd" version="6.0">
+  <servlet>
+    <description></description>
+    <display-name>QARegister</display-name>
+    <servlet-name>QARegister</servlet-name>
+    <servlet-class>QARegister</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>QARegister</servlet-name>
+    <url-pattern>/QARegister</url-pattern>
+  </servlet-mapping>
+  <display-name>QAsite</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>QALoginServlet</display-name>
+    <servlet-name>QALoginServlet</servlet-name>
+    <servlet-class>servlet.QALoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>QALoginServlet</servlet-name>
+    <url-pattern>/QALoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>QAEditServlet</display-name>
+    <servlet-name>QAEditServlet</servlet-name>
+    <servlet-class>servlet.QAEditServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>QAEditServlet</servlet-name>
+    <url-pattern>/QAEditServlet</url-pattern>
+  </servlet-mapping>
+</web-app>
