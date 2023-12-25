@@ -2,6 +2,6 @@
 
 <div class="footer">
 	<a href="http://localhost:8080/QAsite/QAfrontend/QandAguide.jsp">当サイトの使い方</a><br/>
-	ソースコード<br/>
+	<a href="https://github.com/nemo9928/QAsite">ソースコード</a><br/>
 	<a href="http://localhost:8080/QAsite/QAfrontend/QandAexplaincode.jsp">コードの解説</a>
 </div>
