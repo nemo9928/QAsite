@@ -45,7 +45,7 @@ public class QALoginServlet extends HttpServlet {
 		QAListDAO listdao = new QAListDAO();
 		QAListDTO listdto =listdao.select(id);
 		
-		//jspに情報を送信
+		//jspに情報を転送
 		req.setAttribute("fielis", fielis);
 		req.setAttribute("listdto", listdto);
 		req.setAttribute("id", id);

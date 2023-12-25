@@ -29,7 +29,7 @@ public class QAFieldServlet extends HttpServlet {
 		//ランダムで一問DBから取得。
 		QAListDTO listdto = fiedao.select(id, choisfi);
 		
-		//jspに情報を送信
+		//jspに情報を転送
 		req.setAttribute("fielis", fielis);
 		req.setAttribute("listdto", listdto);
 		req.setAttribute("id", id);

@@ -22,16 +22,16 @@ public class QARegisterServlet extends HttpServlet {
 		String btn = req.getParameter("btn");
 		String msg = "";
 		
-		//DB接続用のオブジェクトを作成？
+		//DB接続用のオブジェクトを作成
 		QAAccountDAO accdao = new QAAccountDAO();
 		
-		//記入したuserがすでに登録されているかを確認します。
+		//記入したuserがすでに登録されているかを確認
 		QAAccountBean accbe = accdao.select(id);
 		String dbid = accbe.getId();
 		String dbpass = accbe.getPass();
 		
-		/*新規userかつパスワードが設定されている際には登録します。
-		  id pass が一致した際には削除します。*/
+		/*新規userかつパスワードが設定されている際には登録
+		  id pass が一致した際には削除*/
 		if(btn.equals("新規登録")) {
 			if(id.equals(dbid)) {
 				msg = "すでに登録されています。";
@@ -50,6 +50,7 @@ public class QARegisterServlet extends HttpServlet {
 			}
 		}
 		
+		//JSPに情報を転送
 		req.setAttribute("msg", msg);
 		RequestDispatcher rd = req.getRequestDispatcher("/QAfrontend/QandA.jsp");
 		rd.forward(req, res);

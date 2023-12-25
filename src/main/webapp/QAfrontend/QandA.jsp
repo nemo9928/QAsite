@@ -39,8 +39,7 @@
 	</body>
 </html>
 <%--メモ：libフォルダにconnecterを入れないとDBに接続できない --%>
-<%-- user:tes pass:dever --%>
 
-<%--passの表示方法変えるべき？ --%>
+<%--dbのpassの表示方法変えるべき？ --%>
 
-<%--eclipse乗でdbの編集（insert）が繁栄されない --%>
+<%--eclipse乗でdbの編集（insert）が反映されない --%>

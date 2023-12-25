@@ -7,7 +7,7 @@ import bean.QAAccountBean;
 
 public class QAAccountDAO extends QAConnectDBDAO{
 		
-	//ユーザーidの情報を取得します。
+	//ユーザーidの情報を取得
 	public QAAccountBean select(String id) {
 		QAAccountBean qaab = new QAAccountBean();
 		String sql = "SELECT * FROM account WHERE id = '" + id + "'";

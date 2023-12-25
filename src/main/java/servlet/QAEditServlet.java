@@ -44,7 +44,7 @@ public class QAEditServlet extends HttpServlet {
 		QAListDAO listdao = new QAListDAO();
 		QAListDTO listdto = listdao.select(ssid, sspass);
 		
-		//jspに情報を送信
+		//jspに情報を転送
 		req.setAttribute("listdto", listdto);
 		req.setAttribute("id", ssid);
 		req.setAttribute("pass", sspass);
