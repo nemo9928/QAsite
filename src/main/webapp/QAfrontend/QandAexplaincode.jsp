@@ -79,9 +79,20 @@
 			
 			<h2>jsp</h2>
 			<div class="left">
-				画像なし
+				<img src="./QAimages/QAjsp.png" width="100%">
 			</div>
 			<div class="right">
+				<strong>usebean</strong><br/>
+				<a href="https://segakuin.com/java/jsp/action/usebean.html">参考文献</a><br/>
+				setAttributeで格納された値を取得する場合
+				usebeanタグが必要。<br/>
+				なお、sessionはjsp,servlet共通してつかえるため
+				今回は格納していない。<br/><br/>
+				
+				<strong>import</strong><br/>
+				javaファイルと同様に
+				util,beanパッケージ等インポートが必要。<br/><br/>
+				
 				<strong>キャスト</strong><br/>
 				セッション、リクエストスコープはどちらも
 				Object型の為、変数代入時キャストが必要。
