@@ -38,8 +38,3 @@
 		
 	</body>
 </html>
-<%--メモ：libフォルダにconnecterを入れないとDBに接続できない --%>
-
-<%--dbのpassの表示方法変えるべき？ --%>
-
-<%--eclipse乗でdbの編集（insert）が反映されない --%>
