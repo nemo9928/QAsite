@@ -3,13 +3,13 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width">
-		<link rel="stylesheet" href="./pagelayout.css">
+		<%--ページの表示方法等の導入 --%>
+		<%@include file="/QAincludefile/QAhead.jsp" %>
 		<title>一問一答</title>
 	</head>
 	<body>
-		<h1><a href="http://localhost:8080/QAsite/QAfrontend/QandA.html">一問一答</a></h1>
+		<%--画面上側を表示 --%>
+		<%@include file="/QAincludefile/QAh1.jsp" %>
 		<div class="center">
 			<h2>アカウントの削除</h2>
 			<div class="center-contents">
