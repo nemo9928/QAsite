@@ -33,7 +33,7 @@ public class QARegisterServlet extends HttpServlet {
 		/*新規userかつパスワードが設定されている際には登録
 		  id pass が一致した際には削除*/
 		if(btn.equals("新規登録")) {
-			if(id.equals(dbid)) {
+			if(id.equalsIgnoreCase(dbid)) {
 				msg = "すでに登録されています。";
 			}else if(id.equals("") || pass.equals("")){
 				msg = "id or pass が未設定です";
@@ -42,7 +42,7 @@ public class QARegisterServlet extends HttpServlet {
 				msg = "登録しました！";
 			}
 		}else if(btn.equals("削除")) {
-			if(id.equals(dbid) && pass.equals(dbpass)) {
+			if(id.equalsIgnoreCase(dbid) && pass.equalsIgnoreCase(dbpass)) {
 				accdao.delete(id);
 				msg = "アカウントを削除しました。";
 			}else {

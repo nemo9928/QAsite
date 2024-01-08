@@ -30,7 +30,7 @@ public class QALoginServlet extends HttpServlet {
 		QAAccountBean accbe = accdao.select(id);
 		String dbpass = accbe.getPass();
 		HttpSession session = req.getSession(true);
-		if(pass.equals(dbpass)) {
+		if(pass.equalsIgnoreCase(dbpass)) {
 			session.setAttribute("ssid", id);
 			session.setAttribute("sspass", pass);
 		}else {
