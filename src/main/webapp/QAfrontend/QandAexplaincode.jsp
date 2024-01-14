@@ -53,7 +53,7 @@
 				JDBCドライバとはjarファイルのこと。<br/><br/>
 				
 				<strong>sqlの戻り値int</strong><br/>
-				後進行数が渡されるため、戻り知はint<br/><br/>
+				更新行数が渡されるため、戻り知はint<br/><br/>
 				
 				<strong>LinkedHashSet</strong><br/>
 				SetはListと違い重複した値を持たない。<br/>
@@ -74,7 +74,7 @@
 				パフォーマンスを向上させる。<br/><br/>
 				
 				<strong>シリアライズとは</strong><br/>
-				データをバイト列にし読み書き可能にする。
+				データをバイト列にすることで読み書き可能にする。
 			</div>
 			
 			<h2>jsp</h2>
@@ -87,7 +87,7 @@
 				setAttributeで格納された値を取得する場合
 				usebeanタグが必要。<br/>
 				なお、sessionはjsp,servlet共通してつかえるため
-				今回は格納していない。<br/><br/>
+				今回は記述していない。<br/><br/>
 				
 				<strong>import</strong><br/>
 				javaファイルと同様に
