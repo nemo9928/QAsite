@@ -16,22 +16,16 @@
 		<%=msg %>
 		<div class="SplitScreen">
 			<div class="left">
-				<table border="1">
-					<tr>
-						<th width="200">項目</th>
-						<th width="550">問題</th>
-						<th width="200">解答</th>
-					</tr>
+				<div class="table">
 					<% for (int i = 0; i < listdto.size(); i++) {
 							QAListBean listbean = listdto.get(i);
 					%>
-						<tr>
-							<td align="center"><%=listbean.getField()%></td>
-							<td align="center"><%=listbean.getQuestion()%></td>
-							<td align="center"><%=listbean.getAnswer()%></td>
-						</tr>
+							<p>項目: <%=listbean.getField()%></p>
+							<p>問題: <%=listbean.getQuestion()%></p>
+							<p>解答: <%=listbean.getAnswer()%></p>
+							<hr>
 					<% } %>
-				</table>
+				</div>
 				
 				<%--一つ前へ戻る --%>
 				<form action="/QAsite/login" method="post">

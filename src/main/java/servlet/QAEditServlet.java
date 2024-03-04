@@ -31,8 +31,12 @@ public class QAEditServlet extends HttpServlet {
 			String field = req.getParameter("field");
 			String question = req.getParameter("question");
 			String answer = req.getParameter("answer");
-			edao.insert(ssid, field, question, answer);
-			msg = question + "を追加しました";
+			if(field != "" && question != "" && answer != "") {
+				edao.insert(ssid, field, question, answer);
+				msg = question + "を追加しました";
+			}else {
+				msg = "未記入のものがあります";
+			}
 		}else if(btn.equals("削除")){
 			String question = req.getParameter("question");
 			String field = req.getParameter("field");
