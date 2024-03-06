@@ -16,6 +16,18 @@
 		<%=msg %>
 		<div class="SplitScreen">
 			<div class="left">
+				<%--作成した項目一覧の表示 --%>
+				<form action="/QAsite/edit" method="post">
+					<select name="field">
+						<% Set<String> fielis = (Set<String>)request.getAttribute("fielis");
+							for(String field: fielis) { %>
+							<option value="<%=field %>"><%=field %></option>
+						<% } %>
+					</select>
+					<%@include file="/QAincludefile/QAid,pass,input.jsp" %>
+					<input type="submit" name="btn" value="問題を絞る">
+				</form>
+		
 				<div class="table">
 					<% for (int i = 0; i < listdto.size(); i++) {
 							QAListBean listbean = listdto.get(i);

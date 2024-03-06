@@ -71,5 +71,36 @@ public class QAListDAO extends QAConnectDBDAO{
 		disconnect();
 		return listdto;
 	}
+	
+	//選択問題を取得する
+	public QAListDTO select(String ssid, String sspass, String choisfi) {
+		QAListDTO listdto = new QAListDTO();
+		 String sql = "SELECT * FROM list WHERE id = '" + ssid + "' and field = '" + choisfi + "' ORDER BY field ASC";
+		Statement stmt = null;
+		ResultSet rs = null;
+		try {
+			connect();
+			stmt = con.createStatement();
+			rs = stmt.executeQuery(sql);
+			while(rs.next()) {
+				QAListBean listbean = new QAListBean();
+				listbean.setId(rs.getString("id"));
+				listbean.setField(rs.getString("field"));
+				listbean.setQuestion(rs.getString("question"));
+				listbean.setAnswer(rs.getString("answer"));
+				listdto.add(listbean);
+			}
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			try {
+				if(rs != null)rs.close();
+				if(stmt != null)stmt.close();
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
+		}
+		disconnect();
+		return listdto;
+	}
 }
-
